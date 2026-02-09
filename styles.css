@@ -1,0 +1,53 @@
+.invitation {
+    background-image: url('path/to/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .invitation {
+        padding: 10px;
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #FF5733;  /* Customizable Color */
+}
+
+.button {
+    background-color: #4CAF50; /* Customizable Color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+.audio-player {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.countdown {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.text {
+    font-size: 1.2em;
+    color: #666; /* Customizable Color */
+    margin-top: 15px;
+}
