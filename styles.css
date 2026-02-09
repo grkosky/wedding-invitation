@@ -1,3 +1,10 @@
+body {
+    background-image: url('wedding-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .invitation {
   font-family: 'Arial', sans-serif;
   background-color: #ffffff;
