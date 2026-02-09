@@ -1,1 +1,45 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Wedding Invitation</title>\n    <style>\n        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }\n        .countdown { font-size: 2em; margin: 20px 0; }\n        .rsvp-button, .details-link, .calendar-button { display: inline-block; margin: 10px; padding: 10px 20px; background-color: #ff69b4; color: white; text-decoration: none; border-radius: 5px; }\n    </style>\n</head>\n<body>\n    <h1>You're Invited to Our Wedding!</h1>\n    <img src="placeholder-image.jpg" alt="Couple Photo" style="width:300px;height:auto;">\n    <h2>Couple Names: John & Jane Doe</h2>\n    <p>Date: February 14, 2026</p>\n    <p>Location: 123 Wedding Venue St, City, State</p>\n    <div class="countdown" id="countdown"></div>\n    <audio controls>\n        <source src="wedding-theme.mp3" type="audio/mpeg">\n        Your browser does not support the audio tag.\n    </audio>\n    <br>\n    <a href="#" class="rsvp-button">RSVP</a>\n    <a href="#" class="details-link">Details</a>\n    <a href="#" class="calendar-button">Add to Google Calendar</a>\n    <p>Welcome to our special day! We can't wait to celebrate with you!</p>\n    <script>\n        // Countdown Timer\n        const countDownDate = new Date('February 14, 2026 15:00:00 UTC').getTime();\n        const countdownFunction = setInterval(function() {\n            const now = new Date().getTime();\n            const distance = countDownDate - now;\n            const days = Math.floor(distance / (1000 * 60 * 60 * 24));\n            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\n            const seconds = Math.floor((distance % (1000 * 60)) / 1000);\n            document.getElementById('countdown').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';\n            if (distance < 0) {\n                clearInterval(countdownFunction);\n                document.getElementById('countdown').innerHTML = 'EXPIRED';\n            }\n        }, 1000);\n    </script>\n</body>\n</html>\n
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадбена покана</title>
+</head>
+<body>
+    <header>
+        <h1 id="couple-names">Име на парот</h1>
+        <img id="couple-image" src="couple.jpg" alt="Слика на парот" />
+    </header>
+    <section id="wedding-details">
+        <h2>Датум</h2>
+        <p id="wedding-date">2026-05-15</p>
+        <h2>Локација</h2>
+        <p id="wedding-location">Сала за прослави, Град, Држава</p>
+    </section>
+    <section id="audio-player">
+        <h2>Слушајте ја нашата песна</h2>
+        <audio controls>
+            <source src="wedding-song.mp3" type="audio/mpeg">
+            Вашиот браузер не ја поддржува аудио тагот.
+        </audio>
+    </section>
+    <section id="countdown-timer">
+        <h2>Време до свадбата</h2>
+        <div id="timer">00:00:00</div>
+    </section>
+    <section id="rsvp">
+        <h2>Потврди присуство</h2>
+        <button id="rsvp-button">Потврди го присуството</button>
+    </section>
+    <section id="google-calendar">
+        <h2>Додади во Google календар</h2>
+        <a id="google-calendar-button" href="#">Додади во календарот</a>
+    </section>
+    <footer>
+        <p id="footer-text">Ви благодариме што сте со нас!</p>
+    </footer>
+    <script>
+        // JavaScript код за броење до свадбата и RSVP функционалност
+    </script>
+</body>
+</html>
